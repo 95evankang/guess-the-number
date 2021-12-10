@@ -1,1 +1,47 @@
-<h1>Guess the number</h1>
+<html>
+    <head><title></title></head>
+    <body>
+        <h1>Guess the Number</h1>
+        <script>
+            let num = Math.floor(Math.random() * 11);
+            let guess = prompt("Guess a number between 1 and 10");
+            let counter = 0;
+            let gotIt = false;
+
+            /*
+            counter = counter + 1 
+
+            counter +=1
+
+            counter++
+
+            */
+
+            while(gotIt == false){
+
+                if(guess == num){
+                alert("Nice! You guessed correctly, it was " + num + " it took you " + counter + " guesses");
+                gotIt= true;
+
+                }else if(guess > num) {
+                alert("Too much power mate");
+                guess = prompt("Try again nerd..")
+                counter++
+                }
+            else if(guess < num) {
+                alert("Not enough power mate");
+                guess = prompt("Try again nerd..")
+                counter++
+                }
+
+            }
+
+
+
+
+
+
+            alert(num);
+        </script>
+    </body>
+    </html>
